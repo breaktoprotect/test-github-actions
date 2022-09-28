@@ -28,4 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a python script
         run: python .github/workflows/test.py
+        
+      - name: Test secret in env
+        env:
+          SECRETS: ${{ secrets.TEST_SECRET_TOKEN }}
+        run: echo $SECRETS
+        
 
