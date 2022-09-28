@@ -32,6 +32,6 @@ jobs:
       - name: Test secret in env
         env:
           SECRETS: ${{ secrets.TEST_SECRET_TOKEN }}
-        run: echo $SECRETS
+        run: echo "$SECRETS"
         
 
